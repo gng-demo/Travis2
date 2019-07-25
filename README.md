@@ -1,6 +1,6 @@
 <!-- mdformat off(GitHub header) -->
 Grab n Go Loaners
-[![Build Status](https://travis-ci.org/google/loaner.svg?branch=master)](https://travis-ci.org/google/loaner)
+[![Build Status](https://travis-ci.org/gng-demo/Travis2.svg?branch=master)](https://travis-ci.org/gng-demo/Travis2)
 ======
 <!-- mdformat on -->
 
