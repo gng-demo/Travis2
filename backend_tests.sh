@@ -16,6 +16,6 @@ UPPER_BOUND=$(echo "${LOWER_BOUND} + ${GROUP_SIZE}" | bc)
 
 CURRENT_TESTS=$(echo "${ALL_TESTS}" | tr "\n" " " | python -c "print ' '.join(raw_input().split()[${LOWER_BOUND}:${UPPER_BOUND}])")
 if [[ -n "${CURRENT_TESTS}" ]]; then
-  bazel test --curses=no --test_output=errors --spawn_strategy=standalone \
+  bazel test --incompatible_disable_deprecated_attr_params=false  --curses=no --test_output=errors --spawn_strategy=standalone \
     --test_strategy=standalone --verbose_failures ${CURRENT_TESTS}
 fi
