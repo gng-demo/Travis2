@@ -7,7 +7,7 @@ set -e
 
 CURRENT_TEST_GROUP=${1:-0}
 TOTAL_TEST_GROUPS=${2:-1}
-ALL_TESTS=$(bazel --incompatible_disable_deprecated_attr_params=false  query 'tests(//loaner/...)')
+ALL_TESTS=$(bazel query 'tests(//loaner/...)')
 NUM_TESTS=$(echo "${ALL_TESTS}" | wc -w)
 
 GROUP_SIZE=$(echo "1 + ${NUM_TESTS} / ${TOTAL_TEST_GROUPS}" | bc)
